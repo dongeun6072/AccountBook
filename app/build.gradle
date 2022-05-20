@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -31,7 +32,9 @@ android {
     }
     buildFeatures{
         /* 뷰 바인딩 추가 */
-        viewBinding = true
+        viewBinding true
+        /* 데이터 바인딩 추가 */
+        dataBinding true
     }
 }
 
@@ -48,4 +51,8 @@ dependencies {
     implementation("androidx.fragment:fragment:$rootProject.fragment_version")
     implementation("androidx.fragment:fragment-ktx:$rootProject.fragment_version")
     debugImplementation("androidx.fragment:fragment-testing:$rootProject.fragment_version")
+
+    /* Bottom 네비게이션 종속 항목 선언 */
+    implementation("androidx.fragment:navigation-fragment-ktx:$rootProject.navigation")
+    implementation("androidx.navigation:navigation-ui-ktx:$rootProject.navigation")
 }

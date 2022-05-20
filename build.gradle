@@ -3,6 +3,7 @@ buildscript {
     ext {
         /* dependencies 버전 관리 */
         fragment_version = "1.4.1"
+        navigation = "2.4.0"
     }
 }
 
